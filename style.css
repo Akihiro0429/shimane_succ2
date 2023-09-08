@@ -1,0 +1,274 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url("./images/IMG_4524.PNG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;       /*画面を拡張に合わせて画像を調整*/
+}
+
+
+/*メニューバー*/
+.menuBar {
+  background-color: white;
+  text-align: center;
+  position: fixed; /*ポジションを固定する*/
+  top: 0px;　/*一番上に設置*/
+  left: 0px;
+  z-index: 9999;  /*どの要素よりも上にくるように*/
+  width: 100%; /*横幅を100%に*/
+}
+
+.menuBar img{
+  width: 200px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.menuBar ul li {
+  display: inline-block;
+  width: 120px;
+  margin: 0 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menuBar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.active,              /*ここのactiveが重複している　そのせいでスクロール側のactiveが誤動作している*/
+.menuBar ul li:hover {
+  background-color: #8fc2e4;
+}
+
+.subMenu-1 {
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 9998;
+}
+
+.menuBar ul li:hover .subMenu-1 {
+  display: block;
+  position: absolute;
+  background-color: #5599c7;
+  margin-top: 25px;
+  z-index: 9999;
+}
+
+.menuBar ul li:hover .subMenu-1 ul li {
+  display: block;
+  width: 140px;
+  border-bottom: 1px dotted black;
+}
+
+.menuBar ul li:hover .subMenu-1 ul li:last-child {
+  border: none;
+}
+
+/*ビデオ*/
+.video_wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video_wrapper > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
+/*Information*/
+main h1 {
+	 box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+    background-color: #b99566;
+    color: #fff;
+    font-weight: normal;
+    line-height: 40px;
+}
+main h1 span {
+    display: none;
+}
+
+#Information {
+    padding: 200px;
+}
+
+#information ul {
+    list-style: none;
+    font-size: 1.0rem;
+    color: black;
+    
+}
+#information ul li {
+    padding: 5px 10px;
+}
+
+#information ul li time {
+    display: block;
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+#information ul li p {
+    line-height: 1.5;
+}
+#information ul li p::before {
+    content: "▶︎";
+    margin-right: 5px;
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+#drawer_toggle {
+    display: none;
+}
+
+
+#information {
+    margin:50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+
+}
+#information ul {
+    font-size: 1.2rem;
+}
+#information ul li time {
+    display: inline-block;
+    padding-right: 10px;
+}
+#information ul li p {
+    display: inline-block;
+    line-height: 1;
+}
+#information ul li p::before {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.main{
+  background-color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 80px;
+}
+
+.main .pic{
+  display: flex;       /*画像を横並びに*/
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main ul{
+  display: flex;       /*画像を横並びに*/
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.main li{
+  list-style: none;
+  flex-grow: 1;
+}
+
+.main img{
+  height: 180px;
+  width: 250px;
+}
+
+.main h2{
+  color: white;
+  position: relative;
+  top: 50px;
+  left: 10px;
+}
+
+.main h3{
+  font-size: 80px;
+  text-align: center;
+  white-space: nowrap;    /*画面表示幅が狭くなっても改行しない*/
+}
+
+.main p{
+  margin-top: 50px;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/*スライダー*/
+#key_visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.slider {
+    visibility: hidden;
+    width: 1000px;    /*写真の横幅1000px*/
+    margin: auto;     /*これしないとスライドが左に行く*/
+}
+.slider.slick-initialized {
+    visibility: visible;
+}
+
+.slick-prev, .slick-next {
+    z-index: 1;
+}
+.slick-prev {
+    left: 10px;
+}
+.slick-next {
+    right: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+footer{
+  color: white;
+  background-color: black;
+  font-size: 15px;
+  text-align: center;
+}
+
+footer p{
+  margin: 5px;
+}
+
+.foot{
+  padding: 10px;
+}
+
+footer img{
+  width: 200px;
+  height: 100px;
+}
+

@@ -1,0 +1,46 @@
+body{
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+
+  background-image: url("./images/img_back.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;       /*画面を拡張に合わせて画像を調整*/
+  
+}
+
+.main{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+img {
+  width:200px;
+  height: 120px;
+}
+
+h1 {
+  font-size: 2.0rem;
+}
+
+.introduce{
+  text-align: center;
+  margin: 50px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+#home{
+  color: red;
+}
+
+footer{
+  font-size: 12px;
+}
+
+footer p{
+  display: inline;
+}
